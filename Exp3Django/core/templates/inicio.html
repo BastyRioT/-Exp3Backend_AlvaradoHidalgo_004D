@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="css/estilos.css" type="text/css" rel="stylesheet">
+  {% load static %}
+  <link rel="shortcut icon" href="{%static 'img/Icono.png'%}">
+  <title>Chile Real Gamers</title>
+</head>
+
+<body>
+  <!--Barra de navegación-->
+  <nav class="navbar sticky-top navbar-expand-sm navbar-light bg-light baralign">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" href="inicio.html">
+      <img src="{%static 'img/Icono.png'%}" width="70" height="60">
+    </a>
+
+    <div class="collapse navbar-collapse" id="opciones">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="inicio.html"><img src="{%static 'img/blue.png'%}" width="33" height="33"
+              alt="">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="quienes-somos.html"><img src="{%static 'img/pink.png'%}" width="33" height="33"
+              alt="">Quiénes
+            Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="galeria-fotografica.html"><img src="{%static 'img/Pac-man.png'%}" width="33"
+              height="33" alt="">Galería Fotográfica</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="torneos.html"><img src="{%static 'img/crash.png'%}" width="35"
+              height="35">Torneos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="registro.html"><img src="{%static 'img/aku aku.png'%}" width="35"
+              height="35">Regístrate</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+  <br><br>
+  <h1 style="text-align: center; font-family: Gaming; font-size: 2em;">Bienvenido a Chile Real Gamers</h1>
+  <br><br>
+
+  <!-- Carrusel-->
+  <div class="container">
+    <div id="carousel1" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel1" data-slide-to="1"></li>
+        <li data-target="#carousel1" data-slide-to="2"></li>
+        <li data-target="#carousel1" data-slide-to="3"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="img/fotoxd.jpg" alt="">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/fotoddx.jpg" alt="">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/fotoxxd.jpg" alt="">
+          <div class="carousel-caption">
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="img/fotodx.jpg" alt="">
+          <div class="carousel-caption">
+          </div>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#carousel1" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel1" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+    <hr>
+  </div><br><br>
+  <div
+    class="container-fluid d-flex flex-column justify-content-center align-items-center text-center col-sm-15 main-section">
+    <h2>Mostrar fecha y hora actual</h2>
+    <button class="btn btn-primary" onclick="MostrarFecha()">¿Qué hora es?</button>
+    <img src="img/fil.png" width="120" height="120" alt="">
+    <p id="demo"></p>
+    <hr>
+  </div>
+  <br>
+  <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+    <h3 class="display-1" onmouseover="style.color = 'blue'" onmouseout="style.color= 'black'">Chile Real Gamers</h3>
+    <div>
+      <h3 style="text-align: center;">Es una página web dedicada a chilenos y chilenas que le gustan los esports, en
+        ella podrás ver,
+        organizar y participar en torneos, organizar tu propio grupo de clan, encontrar guías para mejorar o configurar
+        ese juego que tanto te gusta,
+        eso y ¡mucho más!</h3><br><br>
+    </div>
+    <img class="logo img-fluid" src="img/Logotipo.png"><br>
+  </div>
+  <!--Javascript-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <!--Footer-->
+  <footer>
+    <hr>
+    <p>Página web creada por: Bastián Alvarado, Yanara Hidalgo, Marco Illescas. @Copyrigth Derechos reservados.</p>
+    <div><img src="img/face.png" width="70px" alt="Facebook"></a>
+      <img src="img/insta.png" width="70px" alt="Instagram"></a>
+      <a href="https://github.com/BastyRioT/-Experiencia1_AlvaradoHidalgoIllescas_004D" target="_blank"><img
+          src="img/github.png" width="70px" alt="GitHub"></a>
+    </div>
+  </footer>
+</body>
+<script>
+  function MostrarFecha() {
+    document.getElementById("demo").innerHTML = Date();
+  }
+</script>
+
+</html>
