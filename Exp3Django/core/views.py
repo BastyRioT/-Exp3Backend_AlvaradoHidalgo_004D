@@ -4,8 +4,9 @@ from django.shortcuts import render
 
 
 def inicio(request):
+    nombre = 'Claudia Andrea'
 
-    return render(request, 'inicio.html')
+    return render(request, 'inicio.html', context={'nombre_usuario':nombre})
 
 
 def galeria(request):
