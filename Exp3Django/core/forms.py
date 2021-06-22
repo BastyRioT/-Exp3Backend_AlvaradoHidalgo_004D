@@ -1,4 +1,3 @@
-from Exp3Django.settings import DATABASES
 from django import forms
 from django.forms import ModelForm
 from .models import Registro
@@ -34,7 +33,7 @@ class RegistroForm(ModelForm):
                     'datafield': 'usuario123'
                 }
             ),
-            'contraseña': forms.PasswordInput(
+            'contraseña': forms.TextInput(
                 attrs={
                     'class': 'form-control',
                     'id': 'password',

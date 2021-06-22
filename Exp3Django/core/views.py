@@ -18,11 +18,7 @@ def datos(request):
 
     registros = Registro.objects.all()
 
-    datos = {
-        'registros': registros
-    }
-
-    return render(request, 'datos.html', datos)
+    return render(request, 'datos.html', {'registros': registros})
 
 
 def form_registro(request):
@@ -35,10 +31,35 @@ def form_registro(request):
 
             registro_form.save()
 
-            return redirect('home')
+            return redirect('inicio')
 
     else:
 
         registro_form = RegistroForm()
 
     return render(request, 'form_registro.html', {'registro_form': registro_form})
+
+
+def mod_registro(request, id):
+
+    registro = Registro.objects.get(usuario=id)
+
+    datos = {
+
+        'form': RegistroForm(instance=registro)
+
+    }
+
+    if request.method == 'POST':
+
+        formulario = RegistroForm(data=request.POST, instance=registro)
+
+        if formulario.is_valid:
+
+            registro.delete()
+
+            formulario.save()
+
+            return redirect('datos')
+
+    return render(request, 'mod_registro.html', datos)
