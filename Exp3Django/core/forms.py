@@ -22,7 +22,7 @@ class RegistroForm(ModelForm):
                     'class': 'form-control',
                     'id': 'correo',
                     'name': 'email',
-                    'datafield': 'ejemplo@ejemplo.cl'
+                    'placeholder': 'Ejemplo@ejemplo.cl'
                 }
             ),
             'usuario': forms.TextInput(
@@ -30,14 +30,15 @@ class RegistroForm(ModelForm):
                     'class': 'form-control',
                     'id': 'usuario',
                     'name': 'usuario',
-                    'datafield': 'usuario123'
+                    'placeholder': 'Usuario123'
                 }
             ),
             'contraseña': forms.TextInput(
                 attrs={
                     'class': 'form-control',
                     'id': 'password',
-                    'name': 'password'
+                    'name': 'password',
+                    'placeholder': 'Minimo 6 caracteres'
                 }
             ),
             'fchnac': forms.DateInput(
@@ -46,7 +47,7 @@ class RegistroForm(ModelForm):
                     'id': 'fchnac',
                     'name': 'fecha',
                     'min': '1900-01-01',
-                    'datafield': '1900-01-01'
+                    'placeholder': '1900-01-01'
                 }
             )
         }

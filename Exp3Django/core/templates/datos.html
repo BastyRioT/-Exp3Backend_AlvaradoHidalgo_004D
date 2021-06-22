@@ -68,10 +68,14 @@
                     <td> {{re.contraseña}} </td>
                     <td> {{re.fchnac}} </td>
                     <td><a href="{% url 'mod_registro' re.usuario %}">Modificar </a></td>
+                    <td><a href="{% url 'del_registro' re.usuario %}">Eliminar </a></td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+        <a href="{% url 'form_registro' %}">
+            <input class="btn btn-primary" type="button" value="Registrar Nuevo Usuario" />
+        </a>
 
     </div>
 

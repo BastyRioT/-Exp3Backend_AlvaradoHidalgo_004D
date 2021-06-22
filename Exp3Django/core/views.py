@@ -63,3 +63,12 @@ def mod_registro(request, id):
             return redirect('datos')
 
     return render(request, 'mod_registro.html', datos)
+
+
+def del_registro(request, id):
+
+    registro = Registro.objects.get(usuario=id)
+
+    registro.delete()
+
+    return redirect(to="datos")
